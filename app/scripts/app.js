@@ -1,8 +1,16 @@
 (function() {
-    function config($stateProvider) {
+    function config($stateProvider, $locationProvider) {
+        $locationProvider
+            .html5Mode({
+                enabled: true,
+                requireBase:false
+        });
+        
         $stateProvider
-            .state('main', {
-            
+            .state('home', {
+                url: '/',
+                controller: 'RoomCtrl as room',
+                templateUrl: '/templates/home.html'                
         });
     }
     angular
