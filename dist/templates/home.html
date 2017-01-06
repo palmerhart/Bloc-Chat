@@ -1,9 +1,9 @@
 <main>
     <section>
         <div>
-            <h1>Home Page</h1>
-            <div ng-repeat="room in rooms">
-                <h2>{{ room.rooms }}</h2>
+            <h1>Home Page</h1>            
+            <div ng-repeat="currentRoom in room.rooms">
+                <h2>{{ currentRoom.$value }}</h2>
             </div>
             
         </div>

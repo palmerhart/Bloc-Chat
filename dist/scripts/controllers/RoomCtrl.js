@@ -1,6 +1,6 @@
 (function () {
     function RoomCtrl(Room) {
-        this.rooms = firebase.database().ref().all();
+        this.rooms = Room.all;        
     }
     
     angular
