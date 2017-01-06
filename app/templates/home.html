@@ -1,7 +1,8 @@
 <main>
     <section>
         <div>
-            <h1>Home Page</h1>            
+            <h1>Home Page</h1>
+            <button type="button" ng-click="launchNew">New Room</button>
             <div ng-repeat="currentRoom in room.rooms">
                 <h2>{{ currentRoom.$value }}</h2>
             </div>

@@ -1,0 +1,18 @@
+<main>
+    <section>
+        <h2>Create new room</h2>
+        <p>Enter a room name</p>
+        <div ng-repeat="currentRoom in room.rooms">
+            <form ng-submit="newestRoom">
+            <input type="text" ng-model="text" value="">
+            <br>
+            <button>Cancel</button>            
+            <input type="submit" id="submit" value="Create room"> 
+            <!-- test output if form adding to array -->
+            <p>{{ currentRoom.$value }}</p>
+        </form>
+        </div>           
+    </section>
+</main>
+
+
