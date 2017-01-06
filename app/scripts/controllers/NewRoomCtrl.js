@@ -1,8 +1,8 @@
 ( function () {
     function newRoomCtrl(newRoom) {
-        this.newestRoom = newRoom.roomName;
+        this.newestRoom = newRoom.$value;
         
-        var launchNew = $Modal.open({
+        this.launchNew = $uibModal.open({
             templateURL: '/templates/newRoom.html',
             controller: '/controllers/NewRoomCtrl'
         });
@@ -13,6 +13,6 @@
     
     angular
         .module('blocChat')
-        .controller('newRoomCtrl', ['Room', newRoomCtrl])
+        .controller('newRoomCtrl', ['Room', 'RoomCtrl', newRoomCtrl])
     
 })();
