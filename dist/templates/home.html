@@ -2,7 +2,7 @@
     <section>
         <div>
             <h1>Home Page</h1>
-            <div>
+            <div ng-controller='ModalCtrl'>
                 <button type="button" ng-click="newChat()">New Room</button>
             </div>    
             <div ng-repeat="currentRoom in room.rooms">
