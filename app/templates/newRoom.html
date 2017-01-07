@@ -2,12 +2,12 @@
     <section>
         <h2>Create new room</h2>
         <p>Enter a room name</p>
-        <div>
-            <form ng-submit="newRoom" ng-controller="NewRoomCtrl.js">
+        <div ng-controller="NewRoomCtrl as new">
+            <form ng-submit="newRoom">
                 <input type="text" ng-model="text" value="">
                 <br>
                 <button>Cancel</button>            
-                <input type="submit" id="newRoom" value="Create room">             
+                <input type="submit" value="Create room">             
             </form>
         </div>           
     </section>
