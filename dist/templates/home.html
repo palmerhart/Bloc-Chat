@@ -2,8 +2,8 @@
     <section>
         <div>
             <h1>Home Page</h1>
-            <div ng-controller='ModalCtrl'>
-                <button type="button" ng-click="newChat()">New Room</button>
+            <div ng-controller='RoomCtrl as room'>
+                <button type="button" ng-click="room.open()">New Room</button>
             </div>    
             <div ng-repeat="currentRoom in room.rooms">
                 <h2>{{ currentRoom.$value }}</h2>
