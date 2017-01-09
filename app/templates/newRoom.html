@@ -1,13 +1,13 @@
 <main>
-    <section class="modal-body">
+    <section>
         <h2>Create new room</h2>
         <p>Enter a room name</p>
         <div ng-controller="ModalCtrl as modal">
             <form>
-                <input type="text" ng-model="modal.newChatRoom.$value">
+                <input type="text" ng-model="addRoom.name">
                 <br>
                 <button ng-click="modal.cancel()">Cancel</button>            
-                <input type="submit" value="Create room" ng-click="modal.createNewRoom()">             
+                <input type="submit" value="Create room" ng-click="modal.addRoom()">             
             </form>
         </div>           
     </section>

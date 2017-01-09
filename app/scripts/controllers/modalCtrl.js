@@ -1,13 +1,17 @@
 (function () {
-    function ModalCtrl(Room, $uibModalInstance) {
-        this.cancel = function () {
+    function ModalCtrl(Room, $uibModalInstance, $scope) {
+        
+        $scope.newRoom = {};
+        
+        $scope.newRoom.name = "test name";
+        
+        $scope.cancel = function () {
             $uibModalInstance.dismiss('cancel');
         };
         
-        this.createNewRoom = function () {
-            Room.addRoom(this.newChatRoom);
-            this.newChatRoom = {};
-            $uibModalInstance.dismiss('cancel');
+        $scope.createNewRoom = function () {
+            Room.addRoom = {name: ''};            
+            $uibModalInstance.close($scope.newRoom);
         };
     }
     
