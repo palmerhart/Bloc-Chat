@@ -9,9 +9,9 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                controller: 'RoomCtrl as room',                 
+                controller: 'RoomCtrl as $ctrl',                 
                 templateUrl: '/templates/home.html'                
-        });
+        });      
             
     }
     angular

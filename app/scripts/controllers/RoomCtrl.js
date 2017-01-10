@@ -1,16 +1,16 @@
 (function () {
     function RoomCtrl($scope, Room, $uibModal) {
-        $scope.rooms = Room;
+        $scope.rooms = Room.all;
         $scope.currentRoom = null;
         
         $scope.open = function () {
             $uibModal.open({
                 templateUrl: '/templates/newRoom.html',
-                controller: 'ModalCtrl'
-            })
+                controller: 'ModalCtrl as modal'
+            })            
         };
         
-        return $scope.rooms;
+        return $scope;
             
     }
     

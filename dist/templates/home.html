@@ -2,13 +2,12 @@
     <section>
         <div>
             <h1>Bloc-Chat</h1>
-            <div ng-controller='RoomCtrl as room'>
-                <button type="button" ng-click="open()">New Room</button>
+            <div>              
+                <button type="button" ng-click="$ctrl.open()">New Room</button>
             </div>    
-            <div ng-repeat="currentRoom in room.rooms">
-                <h2>{{ currentRoom.$value }}</h2>
-            </div>
-            
+            <div ng-repeat="currentRoom in $ctrl.rooms">
+                <h2>{{ currentRoom.name }}</h2>
+            </div>            
         </div>
     </section>
 </main>
