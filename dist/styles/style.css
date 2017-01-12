@@ -1,0 +1,41 @@
+body {
+    background-color: whitesmoke;
+}
+
+nav {
+    display: inline-block;
+    width: 25%;         
+    background-color: darkgray;
+    text-align: left;
+    float: left;
+    height: 100%;
+    min-height: 960px;
+    padding-left: 20px;
+    min-width: 250px;
+}
+
+nav.h3 {
+    float: left;
+}
+
+#new-room-button {
+    vertical-align: middle;
+}
+
+.modal-stuff {
+    padding: 5px;
+    margin: 10px;
+}
+
+.messages-container {
+    display: inline-block;
+    background-color: #9baac4;   
+    width: 75%;
+    float: right;
+    height: 100%;
+    min-height: 960px;
+}
+
+.ph-inline {
+    display: inline-block;
+}
