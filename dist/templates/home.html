@@ -15,7 +15,7 @@
         <div class="messages-container ph-inline">
             <h2 > {{ currentRoom }} </h2>   
             <div ng-repeat="messages in $ctrl.activeRoomMessages">
-                <h4> {{ messages.username }} : {{ messages.content }} {{ messages.sentAt }}</h4>
+                <h4> User:{{ messages.username }}<br>"{{ messages.content }}" at:{{ messages.sentAt }}</h4>
             </div>            
         </div>
     </body>   
