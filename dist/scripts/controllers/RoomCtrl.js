@@ -1,5 +1,5 @@
 (function () {
-    function RoomCtrl($scope, Room, $uibModal, Message) {
+    function RoomCtrl($scope, Room, $uibModal, Message, $cookies) {
         $scope.rooms = Room.all;
         $scope.messages = Message.all;
                 
@@ -18,12 +18,14 @@
             $scope.activeRoomMessages = Message.getByRoomId(aRoom.$id);
         };  
         
+        $scope.currentUser = $cookies.get('userName');
+        
         return $scope;           
     }   
     
     angular
         .module('blocChat')
-        .controller('RoomCtrl', ['$scope', 'Room', '$uibModal', 'Message', RoomCtrl]);
+        .controller('RoomCtrl', ['$scope', 'Room', '$uibModal', 'Message', '$cookies', RoomCtrl]);
 })();
 
 //$scope.rooms[0].name is first name of chat room in array

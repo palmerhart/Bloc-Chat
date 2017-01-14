@@ -1,6 +1,6 @@
-<div keyboard="false" backdrop="static">    
+<div>    
     <h2>Set a username</h2>
     <h4>This name will appear when you send messages</h4>
-    <input type="text">
-    <button>Set Username</button>    
-</div>    
+    <input id="userInputSubmit" type="text" ng-model="userInputName">
+    <button type="submit" ng-click="addUserName(userInputName)">Set Username</button>    
+</div> 

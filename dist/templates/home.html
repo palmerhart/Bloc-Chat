@@ -5,11 +5,14 @@
     <body>        
         <nav class="nav">
             <div class="rooms">
-                <div class="ph-inline"><h1>Bloc-Chat</h1></div>
+                <div class="ph-inline" >
+                    <h1>Bloc-Chat</h1>                    
+                </div>
                 <div class="ph-inline" id="new-room-button"><button type="button" ng-click="$ctrl.open()">New Room</button></div>    
                 <div ng-repeat="aRoom in $ctrl.rooms">
                     <h3 ng-click="$ctrl.setCurrentRoom(aRoom)">{{ aRoom.name }}</h3>
                 </div>
+                <p>Logged in as: {{ currentUser }}<p>
             </div>    
         </nav>        
         <div class="messages-container ph-inline">
