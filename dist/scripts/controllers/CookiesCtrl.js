@@ -1,19 +1,15 @@
 (function () {
     function CookiesCtrl($scope, $uibModal, $cookies, $uibModalInstance) {
-        
-        $scope.currentUser = "";
-        
-        
+                
         $scope.addUserName = function (userInputName) {
-            if(!userInputName || userInputName === "") {
+            if(!userInputName || userInputName === "") {                
                 return;
             }
             
-            $cookies.put('userName', userInputName);           
-            $uibModalInstance.close();
-        };
-        
-
+            $cookies.put('userName', userInputName);
+            location.reload();
+            $uibModalInstance.close();            
+        };               
         
         return $scope;
     }
@@ -22,3 +18,9 @@
         .module('blocChat')
         .controller('CookiesCtrl', ['$scope','$uibModal', '$cookies', '$uibModalInstance', CookiesCtrl]);
 })();
+
+
+//            $scope.currentUser = userInputName;
+//            location.reload();  
+//        $scope.currentUser = $cookies.get('userName');
+//        $scope.currentUser = "";

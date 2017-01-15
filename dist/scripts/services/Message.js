@@ -7,6 +7,9 @@
             all: messages,
             getByRoomId: function (roomId) {  
                 return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
+            },
+            send: function(messageInput) {
+                messages.$add(messageInput);                
             }
         };
     }

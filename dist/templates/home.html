@@ -12,15 +12,31 @@
                 <div ng-repeat="aRoom in $ctrl.rooms">
                     <h3 ng-click="$ctrl.setCurrentRoom(aRoom)">{{ aRoom.name }}</h3>
                 </div>
-                <p>Logged in as: {{ currentUser }}<p>
+                
+                <!-- tests -->
+                <br>
+                <br>
+                <h2>Test/Dev Area:</h2>
+                <p>Logged in as: {{currentUser}} <p>
+                <p>New Chat Text: {{ newChatText }}</p>
+                <p>Current Room: {{ currentRoomId }}</p>
+                <p>Time:noon</p>
+                <p>Current User: {{currentUser}}</p>                         
+               
             </div>    
         </nav>        
         <div class="messages-container ph-inline">
-            <h2 > {{ currentRoom }} </h2>   
-            <div ng-repeat="messages in $ctrl.activeRoomMessages">
-                <h4> User:{{ messages.username }}<br>"{{ messages.content }}" at:{{ messages.sentAt }}</h4>
-            </div>            
-        </div>
+            <div>
+                <h2 > {{ currentRoom }} </h2>   
+                <div ng-repeat="messages in $ctrl.activeRoomMessages">
+                    <h4> User:{{ messages.username }}<br>"{{ messages.content }}" at:{{ messages.sentAt }}</h4>
+                </div>
+            </div>    
+            <div class="message-input-bar">
+                <input  ng-model="newChatText" class="message-input-bar-input">
+                <button ng-click="$ctrl.addNewChat()" class="message-button">Send</button>
+            </div>
+        </div>       
     </body>   
 </html>
 

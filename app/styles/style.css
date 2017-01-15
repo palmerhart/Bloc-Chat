@@ -39,3 +39,19 @@ nav.h3 {
 .ph-inline {
     display: inline-block;
 }
+
+.message-input-bar {
+    position: absolute;
+    bottom: 0; 
+    width: 100%;
+}
+
+.message-input-bar-input {
+    float: left;
+    width: auto;
+}
+
+.message-button {
+    float: auto;
+}
+
